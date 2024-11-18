@@ -1,6 +1,6 @@
 import { consultarChamadoPorId } from "../repository/chamadosRepository.js";
 
-export default async function consultarChamadoPorId(id){
+export default async function consultarChamadoPorIdService(id){
 
     let registros = await consultarChamadoPorId(id);
 
