@@ -1,4 +1,4 @@
-import { alterarChamado } from "../repository/chamadosRepository.js";
+import { alterarChamado } from "../../repository/chamadosRepository.js";
 
 export default async function alterarChamadoService(chamado, id){
 

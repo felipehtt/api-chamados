@@ -1,4 +1,4 @@
-import { consultarChamado } from "../repository/chamadosRepository.js";
+import { consultarChamado } from "../../repository/chamadosRepository.js";
 
 export default async function consultarChamadoService(){
 

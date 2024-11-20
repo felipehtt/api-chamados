@@ -30,7 +30,7 @@ export async function consultarChamado() {
         titulo,
         informacoes,
         impacto,
-        dataOcorrencia,
+        dt_ocorrencia   dataOcorrencia,
         atribuir
         from tb_chamado
 

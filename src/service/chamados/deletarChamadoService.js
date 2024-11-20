@@ -1,4 +1,4 @@
-import { deletarChamado } from "../repository/chamadosRepository.js";
+import { deletarChamado } from "../../repository/chamadosRepository.js";
 
 export default async function deletarChamadoService(id){
 
