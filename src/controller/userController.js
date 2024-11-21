@@ -3,6 +3,7 @@ const endpoints = Router();
 
 import inserirUserService from "../service/user/inserirUserService.js";
 import validarUserService from "../service/user/validarUserService.js";
+import consultarUserService from "../service/user/consultarUserService.js";
 
 import { gerarToken } from "../utils/jwt.js";
 
@@ -66,6 +67,26 @@ endpoints.post('/entrar', async (req, resp) => {
 
     }
 
+})
+
+
+endpoints.get('/users', async (req, resp) => {
+
+    try {
+    
+        let user = await consultarUserService();
+
+        resp.send(user);
+
+    }
+    catch(err){
+        
+        resp.status(400).send({
+            erro: err.message
+        })
+
+    }
+    
 })
 
 export default endpoints;

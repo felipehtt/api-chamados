@@ -39,3 +39,23 @@ export async function validarUser(user){
     return registros[0][0];
 
 }
+
+
+export async function consultarUser(){
+
+    const comando = `
+    
+    select
+    nome,
+    senha
+    from tb_user
+    
+    `;
+
+    let resposta = await con.query(comando);
+
+    let registros = resposta[0];
+
+    return registros;
+    
+}
