@@ -26,7 +26,7 @@ export async function consultarChamado() {
     const comando = ` 
     
         select
-        id_chamado,
+        id_chamado idChamado,
         titulo,
         informacoes,
         impacto,
@@ -50,11 +50,11 @@ export async function consultarChamadoPorId(id) {
     const comando = ` 
     
         select
-        id_chamado,
+        id_chamado idChamado,
         titulo,
         informacoes,
         impacto,
-        dt_ocorrencia,
+        dt_ocorrencia dataOcorrencia,
         atribuir
         from tb_chamado
         where id_chamado = ?;
