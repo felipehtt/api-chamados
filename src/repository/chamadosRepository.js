@@ -70,6 +70,30 @@ export async function consultarChamadoPorId(id) {
 }
 
 
+export async function consultarChamadoPorImpacto(impacto){
+
+    const comando = `
+    
+        select
+        id_chamado  idChamado,
+        titulo,
+        informacoes,
+        impacto,
+        dt_ocorrencia   dataOcorrencia,
+        atribuir
+        from tb_chamado
+        where impacto = ?
+    
+    `;
+
+    let response = await con.query(comando, [impacto]);
+
+    let registros = response[0];
+
+    return registros;
+    
+}
+
 export async function alterarChamado(chamado, id){
 
     const comando = `  
